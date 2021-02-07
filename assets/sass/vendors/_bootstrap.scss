@@ -1,0 +1,23 @@
+$primary: #f4623a;
+$secondary: #fff;
+$dark: #343a40;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import '../base/mixins';
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            @include navItem();
+        }
+    }
+}
+
+.btn {
+    border-radius: 10rem;
+    padding: $base * 5 $base * 9;
+}

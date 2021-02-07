@@ -1,0 +1,26 @@
+.project-item {
+    height: 350px;
+    position: relative;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__top-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary;
+        opacity: 0;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+    &:hover &__top-layer {
+        opacity: .9;
+    }
+}

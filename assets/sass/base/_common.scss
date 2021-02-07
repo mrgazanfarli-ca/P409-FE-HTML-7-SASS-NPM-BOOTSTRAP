@@ -1,0 +1,24 @@
+@import "../base/mixins";
+
+header {
+    top: 0;
+}
+
+footer {
+    background-color: #f8f9fa;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+
+    // @include divider($isSecondary: false);
+
+    // &--secondary {
+    //     @include divider($isSecondary: true);
+    // }
+}
+
+.section-padding {
+    padding: $base * 20 0;
+}

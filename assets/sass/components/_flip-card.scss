@@ -1,0 +1,41 @@
+@import '../base/variables';
+
+.flip-card {
+    height: 508px;
+    position: relative;
+    cursor: pointer;
+    perspective: 2000px;
+
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: 1s;
+
+        &--front {
+            background-image: url("https://opengameart.org/sites/default/files/king_of_hearts2.png");
+            background-size: cover;
+        }
+
+        &--back {
+            background-image: url("https://lh3.googleusercontent.com/proxy/x4KUHiPgE5FjhrCvdGc3ZTljQ3UlPwynXkwYEBz1p5r6I9HOo1IdZIJCWjzaYLlAz7rXG0mqREW_L81jcMjHXydOlaTutic");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transform: rotateY(180deg);
+        }
+    }
+
+    &:hover &__side {
+        &--front {
+            transform: rotateY(180deg);
+        }
+
+        &--back {
+            transform: rotateY(0);
+        }
+    }
+}  
